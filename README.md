@@ -13,7 +13,7 @@ This respository will deploy the following on IBM Cloud:
     - Apache on the web hosts
 
 ## Current State:
- - [ x Deploy VPC with the following resources:
+ - [x] Deploy VPC with the following resources:
     - [ ] A bastion security group that will allow SSH from a single IP address for running our Wireguard Ansible playbook
     - [ ] A web instance security group to allow outbound HTTP/HTTPS traffic
  - [x] An Object Storage instance with the following buckets:
