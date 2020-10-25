@@ -13,13 +13,13 @@ This respository will deploy the following on IBM Cloud:
     - Apache on the web hosts
 
 ## Current State:
- - [ ] Deploy VPC with the following resources:
+ - [ x Deploy VPC with the following resources:
     - [ ] A bastion security group that will allow SSH from a single IP address for running our Wireguard Ansible playbook
     - [ ] A web instance security group to allow outbound HTTP/HTTPS traffic
- - [ ] An Object Storage instance with the following buckets:
-    - [ ] VPC flow logs bucket 
-    - [ ] Subnet flow logs bucket 
-    - [ ] Bastion instance flow logs bucket 
+ - [x] An Object Storage instance with the following buckets:
+    - [x] VPC flow logs bucket 
+    - [x] Subnet flow logs bucket 
+    - [x] Bastion instance flow logs bucket 
  - Flow Log Collector instance with the following flow logs configured:
     - [ ] Collector at the VPC Level pointed to the VPC flow logs bucket
     - [ ] Collector at the Subnet level pointed to the Subnet flow logs bucket
