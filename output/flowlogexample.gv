@@ -1,0 +1,2676 @@
+digraph G {
+
+  graph [labeljust=l]
+  bgcolor="#FFFFFF"
+
+  compound=true
+  rankdir=LR
+  ranksep=0.8
+  # ratio=0.8
+  pad=0.3
+  // splines="polyline"
+  fontname = "helvetica"
+
+  label="Automatically generated with json2gv.py\nhttps://github.com/l2fprod/vpc-diagram-exporter"
+
+  node [
+    fontname = "helvetica"
+    fontsize=12
+    fontcolor="#646365"
+    width=1.1
+    shape = "box"
+  ]
+  edge [
+    fontname = "helvetica"
+    fontsize=8
+    fontcolor="#646365"
+    color="#000000"
+    arrowhead="vee"
+    style="dotted"
+  ]
+
+  internet [
+    label = "\nInternet\n "
+    shape = "egg"
+    fontsize=16
+    style="filled"
+    color="#7bbb98"
+    fillcolor="#7bbb98"
+    fontcolor="#000000"
+  ]
+
+  // force the internet outside of IBM Cloud
+  subgraph cluster_internet {
+    label = ""
+    color = "#FFFFFF"
+    internet
+  }
+
+  // force security groups outside of IBM Cloud
+  subgraph cluster_security_groups {
+    label = ""
+    color = "#FFFFFF"
+
+    // SECURITY GROUPS
+    
+    
+    
+    "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc" [
+      label = <
+      <TABLE border="0">
+      <TR><TD colspan="4"><B>flowlogexample-bastion-security-group</B></TD></TR>
+      <TR>
+      <TD>direction</TD>
+      <TD>protocol</TD>
+      <TD>ports</TD>
+      <TD>remote</TD>
+      </TR>
+      
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>tcp</TD>
+      <TD>22 - 22</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>icmp</TD>
+      <TD> - </TD>
+      <TD>0.0.0.0/0</TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>all</TD>
+      <TD> - </TD>
+      <TD>10.245.0.0/24</TD>
+      </TR>
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>all</TD>
+      <TD> - </TD>
+      <TD>10.245.0.0/24</TD>
+      </TR>
+      
+      
+      </TABLE>
+      >
+      style="rounded"
+      shape="folder"
+    ]
+    
+    
+    
+    "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465" [
+      label = <
+      <TABLE border="0">
+      <TR><TD colspan="4"><B>flowlogexample-web-security-group</B></TD></TR>
+      <TR>
+      <TD>direction</TD>
+      <TD>protocol</TD>
+      <TD>ports</TD>
+      <TD>remote</TD>
+      </TR>
+      
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>icmp</TD>
+      <TD> - </TD>
+      <TD>0.0.0.0/0</TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>tcp</TD>
+      <TD>443 - 443</TD>
+      <TD>0.0.0.0/0</TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>udp</TD>
+      <TD>53 - 53</TD>
+      <TD></TD>
+      </TR>
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>tcp</TD>
+      <TD>80 - 80</TD>
+      <TD>0.0.0.0/0</TD>
+      </TR>
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>tcp</TD>
+      <TD>22 - 22</TD>
+      <TD></TD>
+      </TR>
+      
+      
+      </TABLE>
+      >
+      style="rounded"
+      shape="folder"
+    ]
+    
+    
+    
+    "r026-b3639daa-b939-4e3f-83b5-4ed3154ad5e0" [
+      label = <
+      <TABLE border="0">
+      <TR><TD colspan="4"><B>spirits-cement-herb-hurt</B></TD></TR>
+      <TR>
+      <TD>direction</TD>
+      <TD>protocol</TD>
+      <TD>ports</TD>
+      <TD>remote</TD>
+      </TR>
+      
+      
+      <TR>
+      <TD>outbound</TD>
+      <TD>all</TD>
+      <TD> - </TD>
+      <TD>0.0.0.0/0</TD>
+      </TR>
+      
+      <TR>
+      <TD>inbound</TD>
+      <TD>all</TD>
+      <TD> - </TD>
+      <TD>spirits-cement-herb-hurt</TD>
+      </TR>
+      
+      
+      </TABLE>
+      >
+      style="rounded"
+      shape="folder"
+    ]
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  }
+
+  subgraph cluster_ibmcloud {
+    label = <<BR/>  IBM Cloud>
+    color = "#9fd1f0"
+    fillcolor = "#9fd1f0"
+    style = "rounded, filled"
+
+    // VPCs
+    
+    subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_us-south" {
+      label = <<BR/>  us-south>
+      color = "#000000"
+      fillcolor = "#e2f7f5"
+      style = "rounded, dotted, filled"
+
+      subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a" {
+        label = <<BR/>  flowlogexample <I>(available) </I>>
+        color = "#96b1b6"
+        fillcolor = "#96b1b6"
+        style = "rounded, filled"
+
+      // REGIONS
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-3" {
+          label = <<BR/>  au-syd-3>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-1" {
+          label = <<BR/>  au-syd-1>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" [
+              label=<
+                <TABLE border="0">
+                <TR><TD>flowlogexample-au-syd-1-gateway</TD></TR>
+                
+                <TR><TD>159.23.100.224</TD></TR>
+                
+                </TABLE>
+              >
+              style = "filled"
+              shape = "box3d"
+            ]
+
+            "r026-a4997460-b17b-4530-9738-a3fd5d861164" -> internet
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+              subgraph "cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82" {
+                label = <<BR/>  flowlogexample-au-syd-1-subnet - 10.245.0.0/24 <I>(available)</I>>
+                fillcolor = "#FFFFFF"
+                style = "rounded, filled"
+
+                // invisible node to be able to attach Network ACLs
+                "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [
+                  style="invis"
+                ]
+
+                
+
+                // SERVERS in this SUBNET
+                
+                    "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-bastion-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.7</TD></TR>
+                        
+                        
+                          <TR><TD>159.23.96.100 (flowlogexample-bastion-fip)</TD></TR>
+                        
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" -> "r026-a3081a45-c8a7-472f-a0ff-b916aae832fc"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                      internet -> "02h7_da3befb8-e6be-4a5d-95a1-92d5e21b8228" [dir="both"]
+                      
+                    
+
+                
+                    "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web1-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.5</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_3f5ad7c4-8588-4881-8ca3-5bc2cd2c3b72" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web2-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.6</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_698276f8-a989-4ebd-994b-dc7ee2413a20" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+                    "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" [
+                      label = <
+                      <TABLE BORDER="0">
+                      <TR><TD><B>flowlogexample-web3-instance</B> <I>(running)</I></TD></TR>
+                      <TR><TD><I>2 cores, 4GB, ibm-ubuntu-18-04-1-minimal-amd64-2</I></TD></TR>
+
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        <TR><TD><I>volume boot - 100GB, 3000iops (available)</I></TD></TR>
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+                        
+                        
+                        
+                      
+
+                      
+                      <TR><TD>10.245.0.4</TD></TR>
+                        
+                      
+
+                      </TABLE>
+                      >
+                      style="filled"
+                      color="#000000"
+                      fillcolor="#d69e8e"
+                      fontcolor="#000000"
+                      shape="box3d"
+                    ]
+
+                    
+                      // LINK SERVER to ITS SECURITY GROUPS
+                      
+                        "02h7_fb1158ce-d511-41e4-8190-f15073a22f96" -> "r026-c60c0cd0-d3b4-4c2c-a400-42b5e9d00465"
+                      
+
+                      // IF THE SERVER HAS A FLOATING IP, IT HAS INBOUND/OUTBOUND ACCESS FROM/TO THE INTERNET
+                      
+                    
+
+                
+              }
+            
+          
+        }
+        
+        subgraph "cluster_r026-c614a4b6-9322-440c-b46a-d4846bf5000a_au-syd-2" {
+          label = <<BR/>  au-syd-2>
+          fillcolor = "#dbcabf"
+          style = "rounded, dashed, filled"
+
+          // PUBLIC GATEWAYS
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          // SUBNETS
+          
+
+          
+            
+          
+        }
+        
+      
+      }
+    }
+    
+  }
+
+  // vpc address prefixes
+  
+    "r026-c614a4b6-9322-440c-b46a-d4846bf5000a_address_prefixes" [
+      label = <
+      <TABLE BORDER="0">
+      <TR><TD colspan="2"><B>address prefixes</B></TD></TR>
+      <TR>
+        <TD>zone</TD>
+        <TD>cidr</TD>
+      </TR>
+      
+      <TR>
+        <TD>au-syd-1</TD>
+        <TD>10.245.0.0/18</TD>
+      </TR>
+      
+      <TR>
+        <TD>au-syd-2</TD>
+        <TD>10.245.64.0/18</TD>
+      </TR>
+      
+      <TR>
+        <TD>au-syd-3</TD>
+        <TD>10.245.128.0/18</TD>
+      </TR>
+      
+      </TABLE>
+      >
+      shape="component"
+      style="filled"
+      color = "#000000"
+      fillcolor = "#FFFFFF"
+    ]
+  
+
+  // VPN GATEWAYS
+  
+    
+    
+      
+    
+  
+
+  // LOAD BALANCERS
+  
+    
+    
+      
+    
+  
+
+  // NETWORK ACLS
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+  "r026-1f76cc52-f273-4543-b3de-221b3dd96c8c" [
+    label = <
+    <TABLE border="0">
+    <TR><TD colspan="4"><B>flowlogexample-acl</B></TD></TR>
+    <TR>
+    <TD>action</TD>
+    <TD>direction</TD>
+    <TD>protocol</TD>
+    <TD>source</TD>
+    <TD>destination</TD>
+    <TD>ports</TD>
+    </TR>
+    
+    <TR>
+    <TD>allow</TD>
+    <TD>outbound</TD>
+    <TD>all</TD>
+    <TD>0.0.0.0/0</TD>
+    <TD>0.0.0.0/0</TD>
+    <TD> - </TD>
+    </TR>
+    
+    <TR>
+    <TD>allow</TD>
+    <TD>inbound</TD>
+    <TD>all</TD>
+    <TD>0.0.0.0/0</TD>
+    <TD>0.0.0.0/0</TD>
+    <TD> - </TD>
+    </TR>
+    
+    </TABLE>
+    >
+    style="rounded"
+    shape="folder"
+  ]
+              
+  // acl -> subnet
+  "r026-1f76cc52-f273-4543-b3de-221b3dd96c8c" -> "02h7-ee9603cc-bac0-4380-930d-59157982ed82" [lhead="cluster_02h7-ee9603cc-bac0-4380-930d-59157982ed82"]
+            
+          
+        
+      
+          
+      
+          
+            
+              
+          
+              
+          
+              
+          
+        
+      
+          
+      
+    
+  
+}

@@ -28,3 +28,13 @@ resource "ibm_cos_bucket" "instance_flow_logs" {
   region_location      = var.region
   storage_class        = "smart"
 }
+
+# resource "ibm_iam_authorization_policy" "policy" {
+#   source_service_name         = "is"
+#   source_resource_type        = "flow-log-collector"
+#   source_resource_group_id    = var.resource_group_id
+#   target_service_name         = "cloud-object-storage"
+#   target_resource_instance_id = ibm_resource_instance.cos_instance.id
+#   target_resource_group_id    = var.resource_group_id
+#   roles                       = ["Reader", "Writer"]
+# }

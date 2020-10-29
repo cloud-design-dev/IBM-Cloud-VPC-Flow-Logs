@@ -3,6 +3,7 @@ resource ibm_is_flow_log vpc_flowlog {
   target         = var.vpc_id
   active         = true
   storage_bucket = var.vpc_bucket
+  tags           = concat(var.tags, ["flow-logs"])
 }
 
 
@@ -11,6 +12,7 @@ resource ibm_is_flow_log subnet_flowlog {
   target         = var.subnet_id
   active         = true
   storage_bucket = var.subnet_bucket
+  tags           = concat(var.tags, ["flow-logs"])
 }
 
 resource ibm_is_flow_log instance_flowlog {
@@ -18,4 +20,5 @@ resource ibm_is_flow_log instance_flowlog {
   target         = var.instance_id
   active         = true
   storage_bucket = var.instance_bucket
+  tags           = concat(var.tags, ["flow-logs"])
 }

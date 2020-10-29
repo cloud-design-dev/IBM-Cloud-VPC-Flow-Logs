@@ -42,3 +42,4 @@ resource ibm_is_subnet subnet {
   network_acl              = ibm_is_network_acl.network_acl.id
   public_gateway           = ibm_is_public_gateway.gateway.id
 }
+
